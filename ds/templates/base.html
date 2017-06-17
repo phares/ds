@@ -1,4 +1,5 @@
 {% load cms_tags menu_tags sekizai_tags %}
+{% load staticfiles %}
 <!doctype html>
 <html>
     <head>
@@ -7,8 +8,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}This is my new project home page{% endblock title %}</title>
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/my-styles.css">
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/my-styles.css' %}">
 		 <link href="https://fonts.googleapis.com/css?family=Cantarell:400,700|Fjalla+One" rel="stylesheet">
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800,600' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -23,12 +24,34 @@
     </head>
     <body>
         {% cms_toolbar %}
-        <div class="container">
-            <ul class="nav">
-                {% show_menu 0 100 100 100 %}
-            </ul>
+        		<!-- navigation -->
+		<section>
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+			                <span class="icon-bar"></span>
+			                <span class="icon-bar"></span>
+			                <span class="icon-bar"></span>
+						</button>
+						<a href="index.html" class="navbar-brand">
+							<img src="images/bar.jpg" alt="Logo">
+						</a>
+					</div>
+					 <!-- Collect the nav links, forms, and other content for toggling -->
+					 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			              <ul class="nav navbar-nav navbar-right">
+			                <li class="active"><a href="#">Home</a></li>
+			                <li><a href="about.html">About</a></li>
+			                <li><a href="contacts.html">Contacts</a></li>
+			              </ul>
+            		</div>
+				</div>
+			</nav>
+		</section>
             {% block content %}{% endblock content %}
-        </div>
     		<!-- Footer -->
 		<footer class="footer footer-contacts">
 			<div class="container">
@@ -81,6 +104,6 @@
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     	<!-- Include all compiled plugins (below), or include individual files as needed -->
-    	<script src="js/bootstrap.min.js"></script>
+    	<script src="{% static 'js/bootstrap.min.js' %}"></script>
     </body>
 </html>

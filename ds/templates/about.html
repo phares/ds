@@ -1,188 +1,161 @@
 {% extends "base.html" %}
 {% load cms_tags %}
-
+{% load staticfiles %}
 {% block title %}{% page_attribute "page_title" %}{% endblock title %}
 
 {% block content %}
-		
-		<!-- navigation -->
-		<section>
-			<nav class="navbar navbar-default">
-				<div class="container-fluid">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header">
-						<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-							<span class="sr-only">Toggle navigation</span>
-			                <span class="icon-bar"></span>
-			                <span class="icon-bar"></span>
-			                <span class="icon-bar"></span>
-						</button>
-						<a href="index.html" class="navbar-brand">
-							<img src="images/bar.jpg" alt="Logo">
-						</a>	
+
+	<!-- About US -->
+	<section class="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-10">
+					<div class="section-heading">
+						<h1>About Us</h1>
 					</div>
-					 <!-- Collect the nav links, forms, and other content for toggling -->
-					 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			              <ul class="nav navbar-nav navbar-right">
-			                <li><a href="index.html">Home</a></li>
-			                <li class="active"><a href="about.html">About</a></li>
-			                <li><a href="contacts.html">Contacts</a></li>
-			              </ul>
-            		</div>
+					<p>Deserve Foundation was founded in January 2016 by Chantal Openda after the birth of her son who has congenital hydrocephalus. The distress and frustration she went through looking for treatment shed light to some of the challenges other people alike are going through.</p>
 				</div>
-			</nav>
-		</section>
-		<!-- About US -->
-		<section class="about">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-10">
-						<div class="section-heading">
-							<h1>About Us</h1>
-						</div>
-						<p>Deserve Foundation was founded in January 2016 by Chantal Openda after the birth of her son who has congenital hydrocephalus. The distress and frustration she went through looking for treatment shed light to some of the challenges other people alike are going through.</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-8 col-md-5">
-						<div class="help-btn-cont">
-							<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-								<input type="hidden" name="cmd" value="_s-xclick">
-								<input type="hidden" name="hosted_button_id" value="WEYK7XKRK2ZLG">
-								<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-								<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-							</form>
-							<button class="help-btn btn btn-lg btn-default" data-toggle="modal" data-target="#modal-volunteer">Volunteer</button>
-							<button class="help-btn btn btn-lg btn-default" data-toggle="modal" data-target="#modal-benefit">Beneficiary</button>
-						</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-8 col-md-5">
+					<div class="help-btn-cont">
+						<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+							<input type="hidden" name="cmd" value="_s-xclick">
+							<input type="hidden" name="hosted_button_id" value="WEYK7XKRK2ZLG">
+							<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+							<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+						</form>
+						<button class="help-btn btn btn-lg btn-default" data-toggle="modal" data-target="#modal-volunteer">Volunteer</button>
+						<button class="help-btn btn btn-lg btn-default" data-toggle="modal" data-target="#modal-benefit">Beneficiary</button>
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>
 
-		<!--Modal Volunteer -->
-			<div class="modal fade" id="modal-volunteer" role="dialog">
-			    <div class="modal-dialog">
-			      <!-- Modal content-->
-			    	<div class="modal-content">
-				      	<div class="modal-header">
-				        	<button type="button" class="close" data-dismiss="modal">&times;</button>
-				          	<h4 class="modal-title">Become a Volunteer</h4>
-				        </div>
-				        <div class="modal-body">
-				        	<p>To become a volunteer kindly fill the form below and we will get in touch with you.</p>
-		                  	<form action="">
-					            <div class="form-group">
-					                <label for="email">Names</label>
-					                <input type="text" class="form-control">
-					            </div>
-								<div class="form-group">
-								    <label for="email">Email:</label>
-								    <input type="email" class="form-control">
-								</div>
-								<div class="form-group">
-								    <label for="tel">Phone Number:</label>
-									<input type="tel" class="form-control">
-								</div>
-								<div class="form-group">
-					                <label for="message">Why do you want to volunteer at Deserve?</label>
-					                <textarea type="text" class="form-control" rows="3"></textarea>
-					            </div>
-					            <button type="submit" class="btn btn-lg btn-default">Send</button>
-				            </form>
-				        </div>
-				        <div class="modal-footer">
-				          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				        </div>
-			      	</div> 
-			    </div>
-			</div>
-
-		  	<!--Modal Benefit-->
-			  <div class="modal fade" id="modal-benefit" role="dialog">
-			    <div class="modal-dialog">
-			      <!-- Modal content-->
-			    	<div class="modal-content">
-				      	<div class="modal-header">
-				        	<button type="button" class="close" data-dismiss="modal">&times;</button>
-				          	<h4 class="modal-title">Become a Beneficiary</h4>
-				        </div>
-				        <div class="modal-body">
-				        	<p>To become a beneficiary kindly fill the form below and we will get in touch with you.</p>
-		                  	<form action="">
-					            <div class="form-group">
-					                <label for="email">Names</label>
-					                <input type="text" class="form-control">
-					            </div>
-								<div class="form-group">
-								    <label for="email">Email:</label>
-								    <input type="email" class="form-control">
-								</div>
-								<div class="form-group">
-								    <label for="tel">Phone Number:</label>
-									<input type="tel" class="form-control">
-								</div>
-								<div class="form-group">
-					                <label for="message">Tell us your story:</label>
-					                <textarea type="text" class="form-control" rows="3"></textarea>
-					            </div>
-					            <button type="submit" class="btn btn-lg btn-default">Send</button>
-				            </form>
-				        </div>
-				        <div class="modal-footer">
-				          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				        </div>
-			      	</div> 
-			    </div>
-			</div>
-
-		<!-- Team -->
-		<section class="team">
-			<div class="container">
-				<div class="section-heading">
-					<h1>The Team</h1>
-				</div>
-				<div class="row space-row">
-					<div class="col-xs-0 col-sm-3">
-						<img src="images/chantal3.jpg" alt="chantal">
-						<ul>
-							<li><a href="https://www.linkedin.com/in/chantalopenda"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-							<li><a href="https://twitter.com/chantalopenda"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-						</ul>
+	<!--Modal Volunteer -->
+		<div class="modal fade" id="modal-volunteer" role="dialog">
+			<div class="modal-dialog">
+			  <!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Become a Volunteer</h4>
 					</div>
-					<div class="col-xs-12 col-sm-7">
-						<div class="founder-info">
-							<h3>Chantal Openda, <span class="roles">Founder, Partnership</span></h3>
-							<p>“What I went through with my son Taiden who has congenital hydrocephalus is not anything I would wish on anyone.  The financial burden and emotional distress was too much to bear. My family were the only support system me and my son had. Through Deserve, I want to be family to others alike. I want to be a voice of HOPE to them because there is HOPE”</p>
-
-							<p>Chantal Openda is an experienced business developer and marketer. She has 6 years of experience working in B2B sales and marketing in the technology and business consulting industries.</p>
-							
-							<p>Aside from her passion for children, she is an advocator for gender equality, keen on empowering the african girl. She is also a nature lover who has been involved in build a boma campaigns and save big cats.</p>
-						</div>
+					<div class="modal-body">
+						<p>To become a volunteer kindly fill the form below and we will get in touch with you.</p>
+						<form action="">
+							<div class="form-group">
+								<label for="email">Names</label>
+								<input type="text" class="form-control">
+							</div>
+							<div class="form-group">
+								<label for="email">Email:</label>
+								<input type="email" class="form-control">
+							</div>
+							<div class="form-group">
+								<label for="tel">Phone Number:</label>
+								<input type="tel" class="form-control">
+							</div>
+							<div class="form-group">
+								<label for="message">Why do you want to volunteer at Deserve?</label>
+								<textarea type="text" class="form-control" rows="3"></textarea>
+							</div>
+							<button type="submit" class="btn btn-lg btn-default">Send</button>
+						</form>
 					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-sm-3">
-						<img src="images/rosalia20.jpg" alt="rosalia">
-						<ul>
-							<li><a href="https://www.linkedin.com/in/rosalialorenzen/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-						</ul>
-					</div>
-					<div class="col-sm-7">
-						<div class="founder-info">
-							<h3>Rosalia Lorenzen, <span class="roles">Co-Founder, Operations and Finance and Funding</span></h3>
-							<p>Rosalia is a highly motivated and driven Finance and Operations Director with over eight years’ experience in developing and managing financial systems, implementing sound internal controls, budgeting, financial accounting, tax compliance, risk mitigation, preparation of financial and Management reports, oversight of internal and external audits, business development human resource management, petty cash management, cash flow management and managing the day to day office operations.
-
-							<p>She takes pride in working with and in organizations that focused on community development which aim at bringing change to our society.</p> 
-
-							<p>Rosalia is self- driven, have a pleasant personality, great planning and organization skills and always embrace creative and innovative ways of thinking. She is very autonomous her work and have experience working in and with culturally diverse countries which include Tanzania, Mozambique, Nigeria, Cameroon, Senegal, DR Congo. Rosalia has an MBA in Finance from U.S. International University, she is a CPA-K and holds a First class Honors Degree in Finance and Accounting. 
-							At Deserve, she oversees the finance, operations and human resource management.</p>
-						</div>
+					<div class="modal-footer">
+					  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
+
+		<!--Modal Benefit-->
+		  <div class="modal fade" id="modal-benefit" role="dialog">
+			<div class="modal-dialog">
+			  <!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Become a Beneficiary</h4>
+					</div>
+					<div class="modal-body">
+						<p>To become a beneficiary kindly fill the form below and we will get in touch with you.</p>
+						<form action="">
+							<div class="form-group">
+								<label for="email">Names</label>
+								<input type="text" class="form-control">
+							</div>
+							<div class="form-group">
+								<label for="email">Email:</label>
+								<input type="email" class="form-control">
+							</div>
+							<div class="form-group">
+								<label for="tel">Phone Number:</label>
+								<input type="tel" class="form-control">
+							</div>
+							<div class="form-group">
+								<label for="message">Tell us your story:</label>
+								<textarea type="text" class="form-control" rows="3"></textarea>
+							</div>
+							<button type="submit" class="btn btn-lg btn-default">Send</button>
+						</form>
+					</div>
+					<div class="modal-footer">
+					  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<!-- Team -->
+	<section class="team">
+		<div class="container">
+			<div class="section-heading">
+				<h1>The Team</h1>
+			</div>
+			<div class="row space-row">
+				<div class="col-xs-0 col-sm-3">
+					<img src="images/chantal3.jpg" alt="chantal">
+					<ul>
+						<li><a href="https://www.linkedin.com/in/chantalopenda"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+						<li><a href="https://twitter.com/chantalopenda"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-7">
+					<div class="founder-info">
+						<h3>Chantal Openda, <span class="roles">Founder, Partnership</span></h3>
+						<p>“What I went through with my son Taiden who has congenital hydrocephalus is not anything I would wish on anyone.  The financial burden and emotional distress was too much to bear. My family were the only support system me and my son had. Through Deserve, I want to be family to others alike. I want to be a voice of HOPE to them because there is HOPE”</p>
+
+						<p>Chantal Openda is an experienced business developer and marketer. She has 6 years of experience working in B2B sales and marketing in the technology and business consulting industries.</p>
+
+						<p>Aside from her passion for children, she is an advocator for gender equality, keen on empowering the african girl. She is also a nature lover who has been involved in build a boma campaigns and save big cats.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-3">
+					<img src="images/rosalia20.jpg" alt="rosalia">
+					<ul>
+						<li><a href="https://www.linkedin.com/in/rosalialorenzen/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+				<div class="col-sm-7">
+					<div class="founder-info">
+						<h3>Rosalia Lorenzen, <span class="roles">Co-Founder, Operations and Finance and Funding</span></h3>
+						<p>Rosalia is a highly motivated and driven Finance and Operations Director with over eight years’ experience in developing and managing financial systems, implementing sound internal controls, budgeting, financial accounting, tax compliance, risk mitigation, preparation of financial and Management reports, oversight of internal and external audits, business development human resource management, petty cash management, cash flow management and managing the day to day office operations.
+
+						<p>She takes pride in working with and in organizations that focused on community development which aim at bringing change to our society.</p>
+
+						<p>Rosalia is self- driven, have a pleasant personality, great planning and organization skills and always embrace creative and innovative ways of thinking. She is very autonomous her work and have experience working in and with culturally diverse countries which include Tanzania, Mozambique, Nigeria, Cameroon, Senegal, DR Congo. Rosalia has an MBA in Finance from U.S. International University, she is a CPA-K and holds a First class Honors Degree in Finance and Accounting.
+						At Deserve, she oversees the finance, operations and human resource management.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 		{% endblock content %}

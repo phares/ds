@@ -1,37 +1,10 @@
 {% extends "base.html" %}
 {% load cms_tags %}
-
+{% load staticfiles %}
 {% block title %}{% page_attribute "page_title" %}{% endblock title %}
 
 {% block content %}
 
-		<!-- navigation -->
-		<section>
-			<nav class="navbar navbar-default">
-				<div class="container-fluid">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header">
-						<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-							<span class="sr-only">Toggle navigation</span>
-			                <span class="icon-bar"></span>
-			                <span class="icon-bar"></span>
-			                <span class="icon-bar"></span>
-						</button>
-						<a href="index.html" class="navbar-brand">
-							<img src="images/bar.jpg" alt="Logo">
-						</a>	
-					</div>
-					 <!-- Collect the nav links, forms, and other content for toggling -->
-					 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			              <ul class="nav navbar-nav navbar-right">
-			                <li><a href="index.html">Home</a></li>
-			                <li><a href="about.html">About</a></li>
-			                <li  class="active"><a href="contacts.html">Contacts</a></li>
-			              </ul>
-            		</div>
-				</div>
-			</nav>
-		</section>
 		<!-- Contacts -->
 		<section class="contacts">
 			<div class="container">

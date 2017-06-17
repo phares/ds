@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Deserve Foundation</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/my-styles.css">
+		 <link href="https://fonts.googleapis.com/css?family=Cantarell:400,700|Fjalla+One" rel="stylesheet"> 
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800,600' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	  	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	  	<!--[if lt IE 9]>
+	  	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	  	<![endif]-->
+	</head>
+	<body>
+		
+		<!-- navigation -->
+		<section>
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+			                <span class="icon-bar"></span>
+			                <span class="icon-bar"></span>
+			                <span class="icon-bar"></span>
+						</button>
+						<a href="index.html" class="navbar-brand">
+							<img src="images/bar.jpg" alt="Logo">
+						</a>	
+					</div>
+					 <!-- Collect the nav links, forms, and other content for toggling -->
+					 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			              <ul class="nav navbar-nav navbar-right">
+			                <li class="active"><a href="#">Home</a></li>
+			                <li><a href="about.html">About</a></li>
+			                <li><a href="contacts.html">Contacts</a></li>
+			              </ul>
+            		</div>
+				</div>
+			</nav>
+		</section>
+
+		<!-- Jumbotron -->
+		<section class="jumbotron">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="jumbo-heading">
+							<h1>Donate & Help</h1>
+						</div>	
+						<div class="text">
+							<p>Deserve Foundation is a movement of people from Kenya who believe that people born with congenital disorders 
+							<span class="highlight">DESERVE A RIGHT TO LIFE.</span></p>
+						</div>
+						<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+							<input type="hidden" name="cmd" value="_s-xclick">
+							<input type="hidden" name="hosted_button_id" value="WEYK7XKRK2ZLG">
+							<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+							<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+						</form>
+						<button class="help-btn btn btn-lg btn-default" data-toggle="modal" data-target="#modal-volunteer">Volunteer</button>
+						<button class="help-btn btn btn-lg btn-default" data-toggle="modal" data-target="#modal-benefit">Beneficiary</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!--Modal Volunteer -->
+			<div class="modal fade" id="modal-volunteer" role="dialog">
+			    <div class="modal-dialog">
+			      <!-- Modal content-->
+			    	<div class="modal-content">
+				      	<div class="modal-header">
+				        	<button type="button" class="close" data-dismiss="modal">&times;</button>
+				          	<h4 class="modal-title">Become a Volunteer</h4>
+				        </div>
+				        <div class="modal-body">
+				        	<p>To become a volunteer kindly fill the form below and we will get in touch with you.</p>
+		                  	<form action="">
+					            <div class="form-group">
+					                <label for="email">Names</label>
+					                <input type="text" class="form-control">
+					            </div>
+								<div class="form-group">
+								    <label for="email">Email:</label>
+								    <input type="email" class="form-control">
+								</div>
+								<div class="form-group">
+								    <label for="tel">Phone Number:</label>
+									<input type="tel" class="form-control">
+								</div>
+								<div class="form-group">
+					                <label for="message">Why do you want to volunteer at Deserve?</label>
+					                <textarea type="text" class="form-control" rows="3"></textarea>
+					            </div>
+					            <button type="submit" class="btn btn-lg btn-default">Send</button>
+				            </form>
+				        </div>
+				        <div class="modal-footer">
+				          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				        </div>
+			      	</div> 
+			    </div>
+			</div>
+
+		  	<!--Modal Benefit-->
+			  <div class="modal fade" id="modal-benefit" role="dialog">
+			    <div class="modal-dialog">
+			      <!-- Modal content-->
+			    	<div class="modal-content">
+				      	<div class="modal-header">
+				        	<button type="button" class="close" data-dismiss="modal">&times;</button>
+				          	<h4 class="modal-title">Become a Beneficiary</h4>
+				        </div>
+				        <div class="modal-body">
+				        	<p>To become a beneficiary kindly fill the form below and we will get in touch with you.</p>
+		                  	<form action="">
+					            <div class="form-group">
+					                <label for="email">Names</label>
+					                <input type="text" class="form-control">
+					            </div>
+								<div class="form-group">
+								    <label for="email">Email:</label>
+								    <input type="email" class="form-control">
+								</div>
+								<div class="form-group">
+								    <label for="tel">Phone Number:</label>
+									<input type="tel" class="form-control">
+								</div>
+								<div class="form-group">
+					                <label for="message">Tell us your story:</label>
+					                <textarea type="text" class="form-control" rows="3"></textarea>
+					            </div>
+					            <button type="submit" class="btn btn-lg btn-default">Send</button>
+				            </form>
+				        </div>
+				        <div class="modal-footer">
+				          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				        </div>
+			      	</div> 
+			    </div>
+			</div>
+
+		<!-- The Problem -->
+		<section class="problem">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="section-heading">
+							<h1>The Problem</h1>
+						</div>	
+						<div class="problem-text">
+							<p>There is little to no effort locally and across Africa to educate the public about congenital disorders. As a result, some families and individuals fall short to stereotypes and beliefs about some of these conditions. CURE Hospital Uganda, a donor funded hospital in Uganda who specialize in neurosurgery and specifically hydrocephalus and spina bifida have some really shocking findings. In some villages in Uganda, families KILL their own children! Children who are born with Hydrocephalus and Spina Bifida are usually considered cursed or affected by witchcraft. There are cases where these children are left to die locked up in houses, eventually they succumb to the effects of non treatment. These kids are secretly buried and forgotten about. In extreme cases, the women accompanied by their kin drown the kids in nearby rivers.</p>
+						</div>
+						
+						<div class="body-btn">
+							<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+								<input type="hidden" name="cmd" value="_s-xclick">
+								<input type="hidden" name="hosted_button_id" value="WEYK7XKRK2ZLG">
+								<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+								<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+							</form>
+							<button class="help-btn btn btn-lg btn-default" data-toggle="modal" data-target="#modal-volunteer">Volunteer</button>
+							<button class="help-btn btn btn-lg btn-default" data-toggle="modal" data-target="#modal-benefit">Beneficiary</button>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-6">
+							<img src="images/uganda5.jpg" alt="">
+						</div>
+					
+				</div>
+			</div>
+		</section>
+
+		<!-- Our Plan -->
+		<section class="plan">
+			<div class="container">
+				<div class="row">
+					<div class="section-heading">
+						<h1>Our Plan</h1>
+					</div>
+
+					<div class="col-xs-6 col-sm-6 col-md-3">
+						<div class="plan-box">
+							<div class="plan-text">
+								<div class="plan-headline">
+									<h3>Creating awareness</h3>
+								</div>
+								<div class="plan-text-info">
+									<p>Knowledge is power. By making access to information readily available we will be able to educate the public on the causes, treatments plans, where to access treatment, expectations to prepare them psychologically for any future challenges and much more.</p>
+								</div>
+							</div>
+							
+						</div>
+						
+					</div>
+
+					<div class="col-xs-6 col-sm-6 col-md-3">
+						<div class="plan-box">
+							<div class="plan-text">
+								<div class="plan-headline">
+									<h3>Lobbying</h3>
+								</div>
+								<div class="plan-text-info">
+									<p>Through creating awareness we will be able to lobby for government support for certain change.e.g insurance policies to be more lenient on covering congenital conditions and treatment.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class=" col-xs-6 col-sm-6 col-md-3">
+						<div class="plan-box">
+							<div class="plan-text">
+								<div class="plan-headline">
+									<h3>Sponsoring Treatment</h3>
+								</div>
+								<div class="plan-text-info">
+									<p>Most if not all insurance companies DO NOT cover congenital conditions. Treatment which are mostly surgical are very expensive to self finance even for those who can afford it. Deserve Foundation will sponsor a number(ref. section) of children.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-6 col-sm-6 col-md-3">
+						<div class="plan-box">
+							<div class="plan-text">
+								<div class="plan-headline">
+									<h3>Fostering Support Groups</h3>
+								</div>
+								<div class="plan-text-info">
+									<p>Anyone who has gone through a similar scenario or at the least had a loved one battling a disease knows the emotional weight this comes along with. These frustrations if not counselled lead to negative mental effects.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</section>
+
+		<!-- How to help -->
+		<section class="help">
+			<div class="container">
+				<div class="row">
+					<div class="section-heading">
+						<h1>Here's how you can help</h1>
+					</div>
+
+					<div class="col-sm-4">
+						<div class="help-card">
+							<div class="headline">
+								<h3>Make a Donation</h3>
+							</div>
+							<div class="text">
+								<p>We commit to use your contribution to make a difference in the lives children and families who need it most.</p>
+							</div>
+							<div class="body-btn">
+								<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+									<input type="hidden" name="cmd" value="_s-xclick">
+									<input type="hidden" name="hosted_button_id" value="WEYK7XKRK2ZLG">
+									<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+									<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-4">
+						<div class="help-card">
+							<div class="headline">
+								<h3>Become a Volunteer</h3>
+							</div>
+							<div class="text">
+								<p>We depend on volunteers from the public to accomplish this huge mission we have set out to do.</p>
+							</div>
+							<div class="body-btn">
+								<button class="help-btn btn btn-lg btn-default"data-toggle="modal" data-target="#modal-volunteer">Volunteer</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-4">
+						<div class="help-card">
+							<div class="headline">
+								<h3>Become a Beneficiary</h3>
+							</div>
+							<div class="text">
+								<p>The Deserve Beneficiary program is for people with children affected by congenital disorders. Find out how you benefit</p>
+							</div>
+							<div class="body-btn">
+								<button class="help-btn btn btn-lg btn-default"data-toggle="modal" data-target="#modal-volunteer">Beneficiary</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- Footer -->
+		<footer class="footer footer-contacts">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3">
+						<ul>
+							<li><h3>Links</h3></li>
+							<li><p><a href="index.html">Home</a></p></li>
+							<li><p><a href="about.html">About</a></p></li>
+							<li><p><a href="contacts.html">Contacts</a></p></li>
+						</ul>
+					</div>
+					<div class="col-sm-3">
+						<ul>
+							<li><h3>Contacts</h3></li>
+							<li><p>+25470142424228</p></li>
+							<li><p>info@deservefoundation.org</p></li>
+						</ul>
+					</div>
+					<div class="col-sm-3">
+						<ul>
+							<li><h3>Follow Us</h3></li>
+							<li><p><a href="https://www.facebook.com/deservefoundation">Facebook</a></p></li>
+							<li><p><a href="https://www.linkedin.com/company-beta/17961422/?pathWildcard=17961422">LinkedIn</a></p></li>
+						</ul>
+					</div>
+					<div class="col-sm-3">
+						<ul>
+							<li><h3>Address</h3></li>
+							<li><p>Nairobi, Kenya</p></li>
+						</ul>
+					</div>
+				</div>
+			</div>	
+		</footer>
+		<footer class="footer footer-copyright">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-3">
+							<p>&copy; Copyright 2017 Deserve Foundation</p>
+						</div>
+						<div class="col-sm-3">
+							<p>Made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://github.com/john-karanja"> John Karanja</a></p>
+						</div>
+					</div>
+				</div>
+		</footer>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    	<!-- Include all compiled plugins (below), or include individual files as needed -->
+    	<script src="js/bootstrap.min.js"></script>
+	</body>
+
+</html>

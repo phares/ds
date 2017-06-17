@@ -1,0 +1,382 @@
+body {
+	font-family: 'Fjalla One', 'Cantarell', sans-serif, helvetica;
+	line-height: 1.7;
+	color: #40313f;
+}
+/**********************
+Navbar
+***********************/
+.navbar {
+	border-radius: 0;
+	background-color: #73296e;
+	height: 80px;
+	border: none;
+	box-shadow: 1px 1px 9px rgba(0,0,0,0.5);
+	margin-bottom: 0;
+}
+.navbar img {
+	max-width: 150px;
+	height: 50px;
+	position: relative;
+	z-index: 1000;
+}
+.navbar-right {
+	margin-top: 18px;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+	background-color: transparent;
+	color: #fff;
+	border-bottom: 2px solid #fff;
+	padding-bottom: 1.5px;
+}
+/**********************
+Jumbotron
+***********************/
+.jumbotron {
+	background: -moz-linear-gradient(left, rgba(115,41,110,0.2), rgba(115,41,110,0.2)), url(../images/cure.jpg);
+	background: -webkit-linear-gradient(left, rgba(115,41,110,0.2), rgba(115,41,110,0.2)), url(../images/cure.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 570px;
+	background-position:  50% 30%;
+	margin-bottom: 0;
+}
+.jumbotron .jumbo-heading {
+	margin-top: 90px;
+}
+/**********************
+Typography
+***********************/
+p {
+  font-family: 'Cantarell', sans-serif, helevetica;
+}
+.navbar-default .navbar-nav > li > a {
+	color: #fff;
+	font-size: 1.12em;
+}
+.navbar-default .navbar-nav > li > a:hover {
+	color: #4d1c4a;
+}
+.jumbotron .jumbo-heading, .jumbotron .text{
+	color: #fff;	
+}
+h1 {
+	font-family: 'Fjalla One', sans-serif;
+}
+.jumbotron .text p {
+	font-family: 'Cantarell', sans-serif, helevetica;
+  font-size: 1.313em;
+	padding: 10px 0;
+}
+.jumbotron span {
+	border-bottom: 2px solid;
+}
+.section-heading h1 {
+	text-align: center;	font-size: 2.4em;
+}
+.problem .section-heading h1, .about h1, .team h1, .contacts-page h1 {
+	text-align: left;
+}
+.problem-text p {
+	font-size: 1.2em;
+	margin-bottom: 10px;
+}
+section.about p {
+	font-size: 1.2em;
+}
+section.team .founder-info p {
+	font-size: 1.044em;
+}
+section.team span.roles {
+	font-size: 0.7em;
+}
+section.message form label, .modal-body form label {
+	font-weight: 400;
+}
+.footer-copyright p {
+	display: inline-block;
+	font-size: 0.9em;
+}
+.footer h3, .footer li p{
+	font-size: 1em;
+}
+.modal-body p {
+	text-align: center;
+}
+/**********************
+Links
+***********************/
+.navbar a {
+	text-decoration: none;
+}
+a {
+	text-decoration: underline;
+}
+section.team ul {
+	position: relative;
+}
+section.team ul li .fa {
+	position: relative;
+	font-size: 1.3em;
+	background-color: #73296e;
+	color: #fff;
+	padding: 10px;
+	top: -15px;
+	left: 90%;
+}
+section.team ul li {
+	margin: 0 7px;
+}
+.footer-copyright a {
+	color: #fff;
+}
+.modal-header h4 {
+	font-size: 1.6em;
+	text-align: center
+}
+/**********************
+Colors
+***********************/
+.problem, .help, body.about-page, body.contacts-page {
+	background-color: #faf9f9;
+}
+.footer-copyright {
+	background-color: #73296e;
+	color: #fff;
+}
+.footer-contacts {
+	background-color: #fff;
+}
+a {
+	color: #40313f;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	background-color: #73296e;
+	position: relative;	
+}
+.navbar-default .navbar-toggle {
+	border: none;
+}
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #fff;
+}
+.navbar-toggle {
+	padding: 20px 20px;
+}
+.modal-header, .modal-footer {
+	background-color: #73296e;
+	color: #fff;
+}
+
+/**********************
+Spacing
+***********************/
+section.problem, section.plan, section.help, section.about, section.team, section.contacts{
+	padding: 40px 0;
+}
+.plan-box, .help .col-sm-4, section.message form {
+	margin: 20px 0px;
+}
+.space-row {
+	margin-bottom: 20px;
+}
+section.contacts ul, footer ul, .team-img-card ul {
+	list-style: none;
+	padding-left: 0;
+}
+.footer {
+	padding: 10px 0;
+	margin-bottom: 0;
+}
+section.team ul li {
+	display: inline-block;
+}
+/**********************
+Buttons
+***********************/
+button.btn {
+	border-radius: 20px;
+	border: none;
+	padding: 0px 14px;
+	height: 40px;
+	background-color: #308661;
+	color: #fff;
+	font-family:'Cantarell', 'Fjalla One', sans-serif;
+	box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+	font-size: 1em;
+	font-weight: 700;
+	border-radius: 20px;
+	font-size: 1em;
+	margin-top: -1px;
+	height: 30px;
+	transition: 0.3s
+}
+button.btn.help-btn:hover, .message button:hover, .modal-body form button:hover {
+	background-color: #297353;
+	color: #fff;
+	box-shadow: 1px 5px 3px 2px rgba(0,0,0,0.6);
+}
+.jumbotron button.btn, .problem button.btn {
+	margin-top: -3%;
+	display: inline-block;
+}
+.about form, .contacts .help-btn-cont form {
+	display: inline-block;
+}
+.message button, .modal-body form button {
+	margin-top: 7px;
+	background-color: #73296e;
+	height: 40px;
+	padding: 10px 20px;
+	transition: 0.3s;
+}
+.message button:hover, .modal-body form button:hover {
+	background-color: #4d1c4a;
+}
+.help-btn-cont form input {
+	margin-top: 5.12765957447%;
+}
+.help-btn-cont button.btn {
+	margin-top: -2.93442622951%;
+}
+.modal-body form .btn {
+	margin-top: 0px
+}
+.modal-footer button {
+	background-color: #fff;
+	color: #40313f;
+}
+/**********************
+Cards
+***********************/
+.plan-text {
+/* 	box-shadow: 0px 0px 1px rgba(0,0,0,0.3); */
+/* 	border: 1px solid rgba(0,0,0,0.1); */
+/* text-align: center; */
+	padding: 0px 0px; 
+	min-height: 250px;
+}
+.help .help-card, section.team img, .founder-info, section.message form, .modal-body form, .help-btn-cont{
+	box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 4px;
+}
+.help-btn-cont {
+	padding: 10px;
+	margin: 10px 0;
+}
+section.team img {
+	padding: 21px;
+}
+.plan-box {
+/*   background-image: linear-gradient(rgba(115,41,110, 0.9), rgba(115,41,110, 0.9)), url(../images/uganda6.jpg); */
+/* 	background-size: cover; */
+/* 	background-repeat: no-repeat; */
+/* 	background-position:  50% 50%; */
+	min-height: 400px;
+	color: #fff;
+	position: relative;
+	z-index: 1000;
+	background: linear-gradient(to right top, #73296e 88%, #4d1c4a 12%);
+	padding: 30px 10px;
+	box-shadow:   0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+  border-radius: 5px
+}
+/**********************
+Images
+***********************/
+.plan img, section.team img, .problem img  {
+	max-width: 100%;
+}
+.problem img {
+	margin-top: 9.33333333333%;
+	box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+	border-radius: 3px;
+	position: relative;
+	z-index: 1000;
+}
+/**********************
+Forms
+***********************/
+input.form-control, textarea.form-control  {
+	border-radius: 2px;
+}
+input.form-control:focus, textarea.form-control:focus  {
+	box-shadow: none;
+	border: 3px solid #73296e;
+}
+.jumbotron form, .problem form {
+	display: inline-block;
+}
+
+
+/**********************
+Media Queries
+***********************/
+@media only screen and (max-width: 991px) {
+	.plan-box {
+		min-height: 300px;
+	}
+	.problem img {
+		margin-top: 2.66666666667%;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.footer {
+		text-align: center;
+	}
+	section.team img {
+		max-height: 330px;
+	}
+	section.team .founder-info p, section.about p {
+		font-size: 1.08em;
+	}
+	.jumbotron {
+		background-position: 100%;
+		height: 500px;
+	}
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+		z-index: 1000;
+}
+}
+@media only screen and (max-width: 550px) {
+	.problem-text p {
+		font-size: 1em
+	}
+	.section-heading h1 {
+		font-size: 2em;
+	}
+	h3 {
+		font-size: 1.5em;
+	}
+	.plan .col-xs-6 {
+		width: 100%;
+	}
+	.plan-box {
+		min-height: 50px;
+	}
+}
+@media only screen and (max-width: 365px) {
+	.about form, .contacts .help-btn-cont form  {
+		display: block;
+		margin-bottom: 5px;
+	}
+}
+@media only screen and (max-width: 350px) {
+	.jumbotron form, .problem form {
+		display: block;
+		margin-bottom: 5px;
+	}
+	.problem form {
+		margin-bottom: 10px;
+	}
+	section.team .founder-info p {
+		font-size: 0.9em;
+	}
+}
+
+
+
+
+

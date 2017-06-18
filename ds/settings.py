@@ -26,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '#bs-)xahl2@1!ro1g9z3*ircu_4-xexn&=in7^+$zir@1$f7p7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'deservefoundation.org', 'www.deservefoundation.org', 'deserve-foundation.herokuapp.com']
 

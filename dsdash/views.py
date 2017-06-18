@@ -14,7 +14,7 @@ from .forms import VolunteerForm
 
 from django.core.mail import send_mail
 
-send_to = ['abungaphares@gmail.com','abungaphares@gmail.com','abungaphares@gmail.com']
+send_to = ['abungaphares@gmail.com', 'info@deservefoundation.org']
 
 def dsdash(request):
     return HttpResponse("Hello, world. You're at the index.")

@@ -97,14 +97,14 @@ def member(request):
 
          #  redirect to a new URL:
 
-        return HttpResponseRedirect('/member/')
+        return HttpResponseRedirect('/contacts/')
 
     else:
 
-        return HttpResponseRedirect('/member/')
+        return HttpResponseRedirect('/contacts/')
         form = MemberForm
 
-    return HttpResponseRedirect('/member/')
+    return HttpResponseRedirect('/contacts/')
 
 
 def volunteer(request):
@@ -140,14 +140,14 @@ def volunteer(request):
 
          #  redirect to a new URL:
 
-        return HttpResponseRedirect('/volunteer/')
+        return HttpResponseRedirect('/contacts/')
 
     else:
 
-        return HttpResponseRedirect('/volunteer/')
+        return HttpResponseRedirect('/contacts/')
         form = VolunteerForm
 
-    return HttpResponseRedirect('/volunteer/')
+    return HttpResponseRedirect('/contacts/')
     #return render(request, '/contacts/', {'form': form})
 
 def sendmail( to, subject, message ):

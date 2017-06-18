@@ -14,7 +14,8 @@ django-treebeard==4.1.1
 djangocms-admin-style==1.2.7
 djangocms-attributes-field==0.2.0
 djangocms-column==1.7.0
-djangocms-googlemap==0.5.1git stats
+djangocms-googlemap==1.1.1
+djangocms-googlemap==0.5.1
 djangocms-installer==0.9.6
 djangocms-link==2.1.2
 djangocms-snippet==1.9.2

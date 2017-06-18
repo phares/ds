@@ -63,6 +63,14 @@ USE_L10N = True
 
 USE_TZ = True
 
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER  = 'abungaphares@gmail.com'
+EMAIL_HOST_PASSWORD = 'rggfcbgttvijille'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
@@ -150,7 +158,8 @@ INSTALLED_APPS = (
     'djangocms_snippet',
     'djangocms_googlemap',
     'djangocms_video',
-    'ds'
+    'ds',
+    'dsdash',
 )
 
 LANGUAGES = (

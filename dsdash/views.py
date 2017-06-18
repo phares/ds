@@ -78,6 +78,7 @@ def member(request):
         membertype = request.POST['membertype']
         condition = request.POST['condition']
         interest = request.POST.getlist('interest')
+        message = request.POST['message']
 
         send_to = 'abungaphares@gmail.com'
 
@@ -85,7 +86,8 @@ def member(request):
 
 
         mail = "Name :" + " " + name + " " + "Email :" + " " + email + " " + "Phone" + " " + phone + " " + "Member Type" \
-               + " " + membertype + " " + "Condition" + " " + condition + " " + "Interest" + " " + str(interest)
+               + " " + membertype + " " + "Condition" + " " + condition + " " + "Interest" + " " + str(interest) \
+               + "Message" + " " + message
         sendmail(send_to, subject, mail)
 
         messages.success(request, 'Thank you for contacting us. '

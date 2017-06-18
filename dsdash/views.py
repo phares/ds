@@ -14,6 +14,7 @@ from .forms import VolunteerForm
 
 from django.core.mail import send_mail
 
+send_to = ['abungaphares@gmail.com','abungaphares@gmail.com','abungaphares@gmail.com']
 
 def dsdash(request):
     return HttpResponse("Hello, world. You're at the index.")
@@ -33,14 +34,12 @@ def contactus(request):
         phone = request.POST['phone']
         message = request.POST['message']
 
-        send_to = 'abungaphares@gmail.com'
-
         subject = 'New Contact US Form SignUp'
-
 
         mail = "Name :" + " " + name + " " + "Email :" + " " + email + " " + "Phone" + " " + phone + " " + "Message" + " " + message
 
-        sendmail(send_to, subject, mail)
+        for email in send_to:
+            sendmail(email, subject, mail)
 
         messages.success(request, 'Thank you for contacting us. '
                                   'Your message has been received, o'
@@ -80,15 +79,15 @@ def member(request):
         interest = request.POST.getlist('interest')
         message = request.POST['message']
 
-        send_to = 'abungaphares@gmail.com'
-
         subject = 'New deserve Member'
 
 
         mail = "Name :" + " " + name + " " + "Email :" + " " + email + " " + "Phone" + " " + phone + " " + "Member Type" \
                + " " + membertype + " " + "Condition" + " " + condition + " " + "Interest" + " " + str(interest) \
                + "Message" + " " + message
-        sendmail(send_to, subject, mail)
+
+        for email in send_to:
+            sendmail(email, subject, mail)
 
         messages.success(request, 'Thank you for contacting us. '
                                   'Your message has been received, o'
@@ -122,8 +121,6 @@ def volunteer(request):
         message = request.POST['message']
         interest = request.POST.getlist('interest')
 
-        send_to = 'abungaphares@gmail.com'
-
         subject = 'New deserve Volunteer'
 
 
@@ -131,7 +128,8 @@ def volunteer(request):
                " " + country + " " + "Period" + " " + period + " " + "Interest" + " " + str(interest) + " " + "Message" + " " + message
 
 
-        sendmail(send_to, subject, mail)
+        for email in send_to:
+            sendmail(email, subject, mail)
 
         messages.success(request, 'Thank you for contacting us. '
                                   'Your message has been received, o'

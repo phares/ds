@@ -69,13 +69,13 @@
 								{% csrf_token %}
 					            <div class="form-group">
 					                <label for="email">Names</label>
-					                <input name="name" type="text" class="form-control">
+					                <input name="name" type="text" class="form-control" required>
 					            </div>
 								<div class="col-md-12">
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="email">Email:</label>
-											<input name="email" type="email" class="form-control">
+											<input name="email" type="email" class="form-control" required>
 										</div>
 										<div class="form-group">
 											<select id="country" name="country" required data-validation-required-message="Please select country type">
@@ -106,8 +106,8 @@
 												<option value="BJ">Benin</option>
 												<option value="BM">Bermuda</option>
 												<option value="BT">Bhutan</option>
-												<option value="BO">Bolivia, Plurinational State of</option>
-												<option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+												<option value="BO">Bolivia</option>
+												<option value="BQ">Bonaire</option>
 												<option value="BA">Bosnia and Herzegovina</option>
 												<option value="BW">Botswana</option>
 												<option value="BV">Bouvet Island</option>
@@ -131,7 +131,7 @@
 												<option value="CO">Colombia</option>
 												<option value="KM">Comoros</option>
 												<option value="CG">Congo</option>
-												<option value="CD">Congo, the Democratic Republic of the</option>
+												<option value="CD">Congo, DRC</option>
 												<option value="CK">Cook Islands</option>
 												<option value="CR">Costa Rica</option>
 												<option value="CI">Côte d'Ivoire</option>
@@ -211,7 +211,7 @@
 												<option value="LT">Lithuania</option>
 												<option value="LU">Luxembourg</option>
 												<option value="MO">Macao</option>
-												<option value="MK">Macedonia, the former Yugoslav Republic of</option>
+												<option value="MK">Macedonia, Yugoslav Republic</option>
 												<option value="MG">Madagascar</option>
 												<option value="MW">Malawi</option>
 												<option value="MY">Malaysia</option>
@@ -336,7 +336,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="tel">Phone Number:</label>
-											<input name="phone" type="tel" class="form-control">
+											<input name="phone" type="tel" class="form-control" required>
 										</div>
 										<div class="form-group">
 											<select id="period" name="period" required data-validation-required-message="please select period">
@@ -370,7 +370,7 @@
 								</div>
 								<div class="form-group">
 					                <label for="message">Why do you want to volunteer at Deserve?</label>
-					                <textarea name="message" type="text" class="form-control" rows="3"></textarea>
+					                <textarea name="message" type="text" class="form-control" rows="3" required></textarea>
 					            </div>
 					            <button type="submit" class="btn btn-lg btn-default">Send</button>
 				            </form>
@@ -397,13 +397,13 @@
 								{% csrf_token %}
 					            <div class="form-group">
 					                <label for="email">Names</label>
-					                <input name="name" type="text" class="form-control">
+					                <input name="name" type="text" class="form-control" required>
 					            </div>
 								<div class="col-md-12">
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="email">Email:</label>
-											<input name="email" type="email" class="form-control">
+											<input name="email" type="email" class="form-control" required>
 										</div>
 										<div class="form-group">
 											<select id="membertype" name="membertype" required data-validation-required-message="Please select membership type">
@@ -419,7 +419,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="tel">Phone Number:</label>
-											<input name="phone" type="tel" class="form-control">
+											<input name="phone" type="tel" class="form-control" required>
 										</div>
 										<div class="form-group">
 											<select id="condition" name="condition" required data-validation-required-message="please select condition">
@@ -443,7 +443,7 @@
 								</div>
 								<div class="form-group">
 					                <label for="message">Tell us your story:</label>
-					                <textarea name="message" type="text" class="form-control" rows="3"></textarea>
+					                <textarea name="message" type="text" class="form-control" rows="3" required></textarea>
 					            </div>
 					            <button type="submit" class="btn btn-lg btn-default">Send</button>
 				            </form>

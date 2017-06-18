@@ -394,17 +394,51 @@
 				        <div class="modal-body">
 				        	<p>To become a beneficiary kindly fill the form below and we will get in touch with you.</p>
 		                  	<form action="">
+								{% csrf_token %}
 					            <div class="form-group">
 					                <label for="email">Names</label>
 					                <input type="text" class="form-control">
 					            </div>
-								<div class="form-group">
-								    <label for="email">Email:</label>
-								    <input type="email" class="form-control">
+								<div class="col-md-12">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="email">Email:</label>
+											<input type="email" class="form-control">
+										</div>
+										<div class="form-group">
+											<select id="membertype" name="membertype" required data-validation-required-message="Please select membership type">
+											  <option selected="selected" disabled="true"> Membership Type </option>
+											  <option value="child">Deserve child</option>
+											  <option value="parent">Deserve Parent</option>
+											  <option value="affiliate">Deserve Affiliate</option>
+											</select>
+											<p class="help-block text-danger"></p>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="tel">Phone Number:</label>
+											<input type="tel" class="form-control">
+										</div>
+										<div class="form-group">
+											<select id="condition" name="condition" required data-validation-required-message="please select condition">
+												<option selected="selected" disabled="true"> Disorder condition </option>
+												<option value="hydrocephalus">Hydrocephalus</option>
+												<option value="spinabifida">Spina Bifida</option>
+												<option value="cleftlip">Cleft Lip</option>
+												<option value="other">Other</option>
+											</select>
+										<p class="help-block text-danger"></p>
+									</div>
+									</div>
 								</div>
-								<div class="form-group">
-								    <label for="tel">Phone Number:</label>
-									<input type="tel" class="form-control">
+
+								<div style="">
+									<input type="checkbox" name="interest" value="treatment"> Treatment for my child
+									<input type="checkbox" name="interest" value="learning"> Learning about congenital conditions
+									<input type="checkbox" name="interest" value="counselling"> Counselling
+									<input type="checkbox" name="interest" value="helping"> Helping out
+									<p style="">I am interested in: (Tick all that apply)</p>
 								</div>
 								<div class="form-group">
 					                <label for="message">Tell us your story:</label>

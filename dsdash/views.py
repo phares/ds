@@ -22,135 +22,150 @@ def dsdash(request):
 
 def contactus(request):
 
-    # if this is a POST request we need to process the form data
-    if request.method == 'POST':
+    try:
 
-        form = ContactUsForm(request.POST)
+        # if this is a POST request we need to process the form data
+        if request.method == 'POST':
 
-        # if form.is_valid():
+            form = ContactUsForm(request.POST)
 
-        name = request.POST['name']
-        email = request.POST['email']
-        phone = request.POST['phone']
-        message = request.POST['message']
+            # if form.is_valid():
 
-        subject = 'New Contact US Form SignUp'
+            name = request.POST['name']
+            email = request.POST['email']
+            phone = request.POST['phone']
+            message = request.POST['message']
 
-        mail = "Name :" + " " + name + " " + "Email :" + " " + email + " " + "Phone" + " " + phone + " " + "Message" + " " + message
+            subject = 'New Contact US Form SignUp'
 
-        for email in send_to:
-            sendmail(email, subject, mail)
+            mail = "Name :" + " " + name + " " + "Email :" + " " + email + " " + "Phone" + " " + phone + " " + "Message" + " " + message
 
-        messages.success(request, 'Thank you for contacting us. '
-                                  'Your message has been received, o'
-                                  'ne of our representatives will be '
-                                  'in touch with you shortly')
+            for email in send_to:
+                sendmail(email, subject, mail)
 
-         #  redirect to a new URL:
+            messages.success(request, 'Thank you for contacting us. '
+                                      'Your message has been received, o'
+                                      'ne of our representatives will be '
+                                      'in touch with you shortly')
+
+             #  redirect to a new URL:
+
+            return HttpResponseRedirect('/contacts/')
+
+            # else:
+            #     form = ContactUsForm()
+
+        # if a GET (or any other method) we'll create a blank form
+        else:
+
+            return HttpResponseRedirect('/contacts/')
+            form = ContactUsForm()
 
         return HttpResponseRedirect('/contacts/')
+        #return render(request, '/contacts/', {'form': form})
 
-        # else:
-        #     form = ContactUsForm()
-
-    # if a GET (or any other method) we'll create a blank form
-    else:
-
+    except Exception as e:
         return HttpResponseRedirect('/contacts/')
-        form = ContactUsForm()
-
-    return HttpResponseRedirect('/contacts/')
-    #return render(request, '/contacts/', {'form': form})
 
 
 
 def member(request):
 
-    # if this is a POST request we need to process the form data
-    if request.method == 'POST':
+    try:
 
-        form = MemberForm(request.POST)
+        # if this is a POST request we need to process the form data
+        if request.method == 'POST':
 
-        name = request.POST['name']
-        email = request.POST['email']
-        phone = request.POST['phone']
-        membertype = request.POST['membertype']
-        condition = request.POST['condition']
-        interest = request.POST.getlist('interest')
-        message = request.POST['message']
+            form = MemberForm(request.POST)
 
-        subject = 'New deserve Member'
+            name = request.POST['name']
+            email = request.POST['email']
+            phone = request.POST['phone']
+            membertype = request.POST['membertype']
+            condition = request.POST['condition']
+            interest = request.POST.getlist('interest')
+            message = request.POST['message']
+
+            subject = 'New deserve Member'
 
 
-        mail = "Name :" + " " + name + " " + "Email :" + " " + email + " " + "Phone" + " " + phone + " " + "Member Type" \
-               + " " + membertype + " " + "Condition" + " " + condition + " " + "Interest" + " " + str(interest) \
-               + "Message" + " " + message
+            mail = "Name :" + " " + name + " " + "Email :" + " " + email + " " + "Phone" + " " + phone + " " + "Member Type" \
+                   + " " + membertype + " " + "Condition" + " " + condition + " " + "Interest" + " " + str(interest) \
+                   + "Message" + " " + message
 
-        for email in send_to:
-            sendmail(email, subject, mail)
+            for email in send_to:
+                sendmail(email, subject, mail)
 
-        messages.success(request, 'Thank you for contacting us. '
-                                  'Your message has been received, o'
-                                  'ne of our representatives will be '
-                                  'in touch with you shortly')
+            messages.success(request, 'Thank you for contacting us. '
+                                      'Your message has been received, o'
+                                      'ne of our representatives will be '
+                                      'in touch with you shortly')
 
-         #  redirect to a new URL:
+             #  redirect to a new URL:
+
+            return HttpResponseRedirect('/contacts/')
+
+        else:
+
+            return HttpResponseRedirect('/contacts/')
+            form = MemberForm
 
         return HttpResponseRedirect('/contacts/')
-
-    else:
-
+    except Exception as e:
         return HttpResponseRedirect('/contacts/')
-        form = MemberForm
-
-    return HttpResponseRedirect('/contacts/')
 
 
 def volunteer(request):
 
-    # if this is a POST request we need to process the form data
-    if request.method == 'POST':
+    try:
+        # if this is a POST request we need to process the form data
+        if request.method == 'POST':
 
-        form = VolunteerForm(request.POST)
+            form = VolunteerForm(request.POST)
 
-        name = request.POST['name']
-        email = request.POST['email']
-        phone = request.POST['phone']
-        country = request.POST['country']
-        period = request.POST['period']
-        message = request.POST['message']
-        interest = request.POST.getlist('interest')
+            name = request.POST['name']
+            email = request.POST['email']
+            phone = request.POST['phone']
+            country = request.POST['country']
+            period = request.POST['period']
+            message = request.POST['message']
+            interest = request.POST.getlist('interest')
 
-        subject = 'New deserve Volunteer'
-
-
-        mail = "Name :" + " " + name + " " + "Email :" + " " + email + " " + "Phone" + " " + phone + " " + "Country" + \
-               " " + country + " " + "Period" + " " + period + " " + "Interest" + " " + str(interest) + " " + "Message" + " " + message
+            subject = 'New deserve Volunteer'
 
 
-        for email in send_to:
-            sendmail(email, subject, mail)
+            mail = "Name :" + " " + name + " " + "Email :" + " " + email + " " + "Phone" + " " + phone + " " + "Country" + \
+                   " " + country + " " + "Period" + " " + period + " " + "Interest" + " " + str(interest) + " " + "Message" + " " + message
 
-        messages.success(request, 'Thank you for contacting us. '
-                                  'Your message has been received, o'
-                                  'ne of our representatives will be '
-                                  'in touch with you shortly')
 
-         #  redirect to a new URL:
+            for email in send_to:
+                sendmail(email, subject, mail)
+
+            messages.success(request, 'Thank you for contacting us. '
+                                      'Your message has been received, o'
+                                      'ne of our representatives will be '
+                                      'in touch with you shortly')
+
+             #  redirect to a new URL:
+
+            return HttpResponseRedirect('/contacts/')
+
+        else:
+
+            return HttpResponseRedirect('/contacts/')
+            form = VolunteerForm
 
         return HttpResponseRedirect('/contacts/')
-
-    else:
-
+        #return render(request, '/contacts/', {'form': form})
+    except Exception as e:
         return HttpResponseRedirect('/contacts/')
-        form = VolunteerForm
-
-    return HttpResponseRedirect('/contacts/')
-    #return render(request, '/contacts/', {'form': form})
 
 def sendmail( to, subject, message ):
+    
+    try:
+        send_mail(subject, message, 'abungaphares@gmail.com',
+                  [to], fail_silently=True)
 
-    send_mail(subject, message, 'abungaphares@gmail.com',
-              [to], fail_silently=True)
-
-    return
+        return
+    except Exception as e:
+        return HttpResponseRedirect('/contacts/')
